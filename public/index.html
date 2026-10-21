@@ -2,13 +2,79 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Web Engineering Lab 01</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 05 - jQuery Port & TypeScript</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 id="greeting-heading"></h1>
+    <header>
+      <h1>Send Feedback</h1>
+    </header>
 
-    <!-- Script loaded at the bottom so the HTML elements load first -->
-    <script src="script.js"></script>
+    <main>
+      <!-- Task 1: Add novalidate -->
+      <form novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" required />
+        </div>
+
+        <fieldset>
+          <legend>Topic</legend>
+          <label
+            ><input type="radio" name="topic" value="lab" checked /> Lab
+            content</label
+          >
+          <label
+            ><input type="radio" name="topic" value="other" /> Something
+            else</label
+          >
+        </fieldset>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+
+      <p id="status"></p>
+
+      <section id="schedule">
+        <h2>Office Hours Schedule</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Slot</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday 10:00–11:00 (Room 214)</td>
+              <td>
+                <button type="button" data-day="Monday">Book Monday</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Wednesday 14:00–15:00 (Room 214)</td>
+              <td>
+                <button type="button" data-day="Wednesday">
+                  Book Wednesday
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="feedback.js"></script>
   </body>
 </html>

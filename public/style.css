@@ -1,0 +1,47 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+form > div,
+fieldset {
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+tr.selected {
+  background-color: #e6f3ff;
+}
+:root {
+  --color-error: #d32f2f; /* Standard solid red */
+}
+
+.error {
+  display: block !important;
+  color: #ff0000 !important; /* Pure red */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+input[aria-invalid="true"] {
+  border: 2px solid #ff0000 !important; /* Pure red border */
+}
